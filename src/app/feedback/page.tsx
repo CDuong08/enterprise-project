@@ -32,7 +32,7 @@ export default function GiveFeedback() {
   function createAnimation(container: HTMLElement, direction: "left" | "right"): void {
     const elem = document.createElement("div");
     elem.className = "animation";
-    elem.innerText = "🥳🎉🥳🎉";
+    elem.innerText = "🥳🎉";
 
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
