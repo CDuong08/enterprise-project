@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+/* * {
+  border: solid;
+  border-color: red;
+} */
+
+
+:root {
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--foreground);
+  background-color: #535C91;
+}
+
+nav {
+  justify-items: right;
+  font-size: 2rem;
+  margin-right: 0.5vw;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  justify-self: center;
+}
+
+main {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-items: center;
+}
+
+.animation {
+  z-index: 1100;
+  position: absolute;
+  font-size: 24px;
+  pointer-events: none;
+  user-select: none;
+  will-change: left, top;
+  transition: none !important;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 25vh;
+  width: 30vw;
+  height: 27vh;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: aquamarine;
+}
+
+.modal-content {
+  margin: hidden;
+  padding: 10px;
+  width: 27vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: aquamarine;
+  text-decoration: none;
+}
+
+body, footer, header {
+  color: white;
+}
+
+p {
+  font-size: 1.3rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 30px;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
